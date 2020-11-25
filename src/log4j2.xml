@@ -3,26 +3,23 @@
 
     <Appenders>
         <Appender type="Console" name="STDOUT">
-            <Layout type="PatternLayout" pattern="%m MDC%X%n"/>
+            <Layout type="PatternLayout" pattern="%d{dd.MMM.yyyy HH:mm:ss} %p:    %m%n"/>
         </Appender>
-
     </Appenders>
 
     <Loggers>
-
-        <Logger name="com.epam.jwd.strategy.ExistStrategy" level="info" additivity="true">
+        <Logger name="com.epam.jwd.strategy.ExistStrategy" level="info" additivity="false">
             <AppenderRef ref="STDOUT"/>
         </Logger>
-        <Logger name="com.epam.jwd.strategy.NotSquareStrategy" level="error" additivity="true">
+        <Logger name="com.epam.jwd.strategy.NotSquareStrategy" level="error" additivity="false">
             <AppenderRef ref="STDOUT"/>
         </Logger>
-        <Logger name="com.epam.jwd.strategy.EqualPointsStrategy" level="error" additivity="true">
+        <Logger name="com.epam.jwd.strategy.EqualPointsStrategy" level="error" additivity="false">
             <AppenderRef ref="STDOUT"/>
         </Logger>
-        <Logger name="com.epam.jwd.strategy.SameLineStrategy" level="error" additivity="true">
+        <Logger name="com.epam.jwd.strategy.SameLineStrategy" level="error" additivity="false">
             <AppenderRef ref="STDOUT"/>
         </Logger>
-
     </Loggers>
 
 </Configuration>

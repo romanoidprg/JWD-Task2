@@ -15,13 +15,13 @@ public class Triangle extends Figure {
         pointC = pC;
 
         if (pointA.samePoint(pointB)||pointA.samePoint(pointC)||pointB.samePoint(pointC)) {
-            this.setFigurePropertyStrategy(new EqualPointsStrategy());
+            setFigurePropertyStrategy(new EqualPointsStrategy());
         } else if (pointA.IsOnSameLine(pointB,pointC)
                 || pointB.IsOnSameLine(pointC,pointA)
                 || pointC.IsOnSameLine(pointA,pointB)) {
-            this.setFigurePropertyStrategy(new SameLineStrategy());
+            setFigurePropertyStrategy(new SameLineStrategy());
         } else {
-            this.setFigurePropertyStrategy(new ExistStrategy());
+            setFigurePropertyStrategy(new ExistStrategy());
         }
     }
 
@@ -44,7 +44,7 @@ public class Triangle extends Figure {
 
     @Override
     public String toString() {
-            return this.getFigurePropertyStrategy().getTriangleInfo(this);
+            return getFigurePropertyStrategy().getTriangleInfo(this);
     }
 
 }

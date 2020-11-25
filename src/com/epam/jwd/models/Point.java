@@ -1,10 +1,13 @@
 package com.epam.jwd.models;
 
+import com.epam.jwd.strategy.ExistStrategy;
+
 public class Point extends Figure{
     private int x;
     private int y;
 
     public Point(int x, int y){
+        this.setFigurePropertyStrategy(new ExistStrategy());
         this.x = x;
         this.y = y;
     }
@@ -33,6 +36,10 @@ public class Point extends Figure{
        } else {
            return false;
        }
+    }
+    @Override
+    public String toString() {
+        return "Point(x,y): " + x + ", " + y;
     }
 
 }

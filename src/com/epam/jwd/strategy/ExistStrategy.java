@@ -16,7 +16,8 @@ public class ExistStrategy implements FigurePropertyStrategy {
 
     @Override
     public String getTriangleInfo(Triangle triangle){
-        return triangle.getCoordInfo() + ".  Perimetr = " + triangle.perimCalc() + ".  Area = " + triangle.areaCalc();
+        return triangle.getCoordInfo() + ".  Perimetr = " + String.format("%.3f",triangle.perimCalc())
+                + ".  Area = " + String.format("%.3f",triangle.areaCalc());
     }
 
     @Override
@@ -26,7 +27,8 @@ public class ExistStrategy implements FigurePropertyStrategy {
 
     @Override
     public String getSquareInfo(Square square){
-        return square.getCoordInfo() + ".  Perimetr = " + square.perimCalc() + ".  Area = " + square.areaCalc();
+        return square.getCoordInfo() + ".  Perimetr = " + String.format("%.3f", square.perimCalc())
+                + ".  Area = " + String.format("%.3f", square.areaCalc());
     }
 
 }

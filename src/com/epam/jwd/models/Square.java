@@ -46,7 +46,10 @@ public class Square extends Figure {
     }
 
     public double areaCalc(){
-        return 25;
+        return Math.abs((pointA.GetX()*pointB.GetY() + pointB.GetX()*pointC.GetY()
+                      + pointC.GetX()*pointD.GetY() + pointD.GetX()*pointA.GetY()
+                      - pointB.GetX()*pointA.GetY() - pointC.GetX()*pointB.GetY()
+                      - pointD.GetX()*pointC.GetY() - pointA.GetX()*pointD.GetY() ) / 2);
     }
 
     public String getCoordInfo(){

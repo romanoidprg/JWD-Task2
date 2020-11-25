@@ -14,5 +14,8 @@ class Figure {
         return figurePropertyStrategy;
     }
 
+    public void infoLogg(){
+        figurePropertyStrategy.getLogg().log(figurePropertyStrategy.getLogg().getLevel(), this.toString());
+    }
 
 }
