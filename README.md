@@ -1,1 +1,1 @@
-Ready-level: include Strategy pattern (p.1-7).
+Ready-level: include Singleton pattern (p.1-8).
