@@ -6,8 +6,21 @@ import com.epam.jwd.models.Triangle;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import sun.security.jca.GetInstance;
 
 public class ExistStrategy implements FigurePropertyStrategy {
+
+    private static ExistStrategy instance;
+
+    private ExistStrategy(){
+    }
+
+    public static ExistStrategy getInstance(){
+        if (instance == null){
+            instance = new ExistStrategy();
+        }
+        return instance;
+    }
 
     @Override
     public Logger getLogg(){

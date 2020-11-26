@@ -8,6 +8,18 @@ import org.apache.logging.log4j.Logger;
 
 public class NotSquareStrategy implements FigurePropertyStrategy {
 
+    private static NotSquareStrategy instance;
+
+    private NotSquareStrategy(){
+    }
+
+    public static synchronized NotSquareStrategy getInstance(){
+        if (instance == null){
+            instance = new NotSquareStrategy();
+        }
+        return instance;
+    }
+
     @Override
     public Logger getLogg(){
         return LogManager.getLogger(NotSquareStrategy.class);

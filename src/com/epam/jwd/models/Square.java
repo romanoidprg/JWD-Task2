@@ -23,19 +23,19 @@ public class Square extends Figure {
                 ||pointB.samePoint(pointC)
                 ||pointB.samePoint(pointD)
                 ||pointC.samePoint(pointD)) {
-            this.setFigurePropertyStrategy(new EqualPointsStrategy());
+            this.setFigurePropertyStrategy(EqualPointsStrategy.INSTANCE);
         } else if (pointA.IsOnSameLine(pointB,pointC)
                  ||pointB.IsOnSameLine(pointC,pointD)
                  ||pointC.IsOnSameLine(pointD,pointA)
                  ||pointD.IsOnSameLine(pointA,pointB)){
-            this.setFigurePropertyStrategy(new SameLineStrategy());
+            this.setFigurePropertyStrategy(SameLineStrategy.getInstance());
         } else if (pointA.lengthToPoint(pointB)==pointB.lengthToPoint(pointC)
                 && pointB.lengthToPoint(pointC)==pointC.lengthToPoint(pointD)
                 && pointC.lengthToPoint(pointD)==pointD.lengthToPoint(pointA)
                 && pointA.lengthToPoint(pointC)==pointB.lengthToPoint(pointD)){
-            this.setFigurePropertyStrategy(new ExistStrategy());
+            this.setFigurePropertyStrategy(ExistStrategy.getInstance());
         } else {
-            this.setFigurePropertyStrategy(new NotSquareStrategy());
+            this.setFigurePropertyStrategy(NotSquareStrategy.getInstance());
         }
 
     }

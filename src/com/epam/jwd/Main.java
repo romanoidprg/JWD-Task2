@@ -11,7 +11,7 @@ public class Main {
 
         Point[] arrayPoint = {new Point(0,0),
                               new Point(4,4),
-                              new Point(5,4),
+                              new Point(5,5),
                               new Point(4,0)};
 
         Line[] arrayLine = {new Line(arrayPoint[0], arrayPoint[1]),

@@ -11,9 +11,9 @@ public class Line extends Figure {
         pointA = pA;
         pointB = pB;
         if (pointA.samePoint(pointB)) {
-            this.setFigurePropertyStrategy(new EqualPointsStrategy());
+            this.setFigurePropertyStrategy(EqualPointsStrategy.INSTANCE);
         } else {
-            this.setFigurePropertyStrategy(new ExistStrategy());
+            this.setFigurePropertyStrategy(ExistStrategy.getInstance());
         }
     }
 

@@ -7,7 +7,7 @@ public class Point extends Figure{
     private int y;
 
     public Point(int x, int y){
-        this.setFigurePropertyStrategy(new ExistStrategy());
+        this.setFigurePropertyStrategy(ExistStrategy.getInstance());
         this.x = x;
         this.y = y;
     }

@@ -15,13 +15,13 @@ public class Triangle extends Figure {
         pointC = pC;
 
         if (pointA.samePoint(pointB)||pointA.samePoint(pointC)||pointB.samePoint(pointC)) {
-            setFigurePropertyStrategy(new EqualPointsStrategy());
+            setFigurePropertyStrategy(EqualPointsStrategy.INSTANCE);
         } else if (pointA.IsOnSameLine(pointB,pointC)
                 || pointB.IsOnSameLine(pointC,pointA)
                 || pointC.IsOnSameLine(pointA,pointB)) {
-            setFigurePropertyStrategy(new SameLineStrategy());
+            setFigurePropertyStrategy(SameLineStrategy.getInstance());
         } else {
-            setFigurePropertyStrategy(new ExistStrategy());
+            setFigurePropertyStrategy(ExistStrategy.getInstance());
         }
     }
 
