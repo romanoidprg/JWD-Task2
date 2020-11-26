@@ -1,1 +1,1 @@
-Ready-level: include Singleton pattern (p.1-8).
+Complete-level: include Singleton pattern (p.1-8).
