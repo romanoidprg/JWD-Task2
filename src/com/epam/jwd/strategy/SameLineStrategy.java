@@ -1,6 +1,6 @@
 package com.epam.jwd.strategy;
 
-import com.epam.jwd.models.Figure;
+import com.epam.jwd.model.Figure;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -36,4 +36,8 @@ public class SameLineStrategy implements FigurePropertyStrategy {
         return figure.getCoordInfo() + "  is not exist. Some three points are on the same line";
     }
 
+    @Override
+    public String getMultiAngleInfo(Figure figure) {
+        return figure.getCoordInfo() + "  is not exist. Some three points are on the same line";
+    }
 }

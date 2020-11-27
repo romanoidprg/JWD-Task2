@@ -1,6 +1,6 @@
 package com.epam.jwd.strategy;
 
-import com.epam.jwd.models.Figure;
+import com.epam.jwd.model.Figure;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -38,4 +38,8 @@ public class NotSquareStrategy implements FigurePropertyStrategy {
         return figure.getCoordInfo() + "  is just rectangle, but is not square";
     }
 
+    @Override
+    public String getMultiAngleInfo(Figure figure) {
+        return "Its funny";
+    }
 }
