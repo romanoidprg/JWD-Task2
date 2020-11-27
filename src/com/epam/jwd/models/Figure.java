@@ -2,7 +2,7 @@ package com.epam.jwd.models;
 
 import com.epam.jwd.strategy.FigurePropertyStrategy;
 
-class Figure {
+public class Figure {
 
     private FigurePropertyStrategy figurePropertyStrategy;
 
@@ -16,6 +16,18 @@ class Figure {
 
     public void infoLogg(){
         figurePropertyStrategy.getLogg().log(figurePropertyStrategy.getLogg().getLevel(), this.toString());
+    }
+
+    public String getCoordInfo(){
+        return "Unknown figure";
+    }
+
+    public double perimCalc(){
+        return 0;
+    }
+
+    public double areaCalc(){
+        return 0;
     }
 
 }
