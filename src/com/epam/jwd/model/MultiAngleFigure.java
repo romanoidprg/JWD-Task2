@@ -32,7 +32,7 @@ class MultiAngleFigure extends Figure {
 
     @Override
     public String getCoordInfo() {
-        String coordInfo = "MultiAngel of " + figurePointArray.length + " points (";
+        String coordInfo = "MultiAngle of " + figurePointArray.length + " points (";
         for (int i = 0; i < figurePointArray.length; i++) {
             coordInfo += figurePointArray[i].getX() + "," + figurePointArray[i].getY() + ";  ";
         }
